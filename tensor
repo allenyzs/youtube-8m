@@ -1,0 +1,8 @@
+/Users/yangzhuoshu/data/yt8m_video_level
+
+MODEL_DIR=/Users/yangzhuoshu/Desktop/result
+python train.py --train_data_pattern='/Users/yangzhuoshu/data/yt8m_video_level/train*.tfrecord' --model=LogisticModel --train_dir=$MODEL_DIR/video_level_logistic_model
+
+python eval.py --eval_data_pattern='/Users/yangzhuoshu/data/yt8m_video_level/validate*.tfrecord' --model=LogisticModel --train_dir=$MODEL_DIR/video_level_logistic_model --run_once=True
+
+python inference.py --output_file=$MODEL_DIR/video_level_logistic_model/predictions.csv --input_data_pattern='/Users/yangzhuoshu/data/yt8m_video_level/test*.tfrecord' --train_dir=$MODEL_DIR/video_level_logistic_model
