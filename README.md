@@ -1,2 +1,2 @@
 Please see Final report
-[file.pdf](Documentation/Final Report(Video Group2).pdf)
+[report](https://github.com/allenyzs/youtube-8m/blob/master/Final%20Report(Video%20Group2).pdf)
